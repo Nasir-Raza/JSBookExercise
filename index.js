@@ -144,46 +144,82 @@ if (age > 18){
 else{
     alert("Age : " + age + " Too young");
 }
-// Exercise # 2
+
+var x = prompt("Where does the Pope live?");
+var correctAnswer = "Vatican";
+
+if (x === correctAnswer) {
+alert("Correct!");
+}
+
+// Comparison operators
+document.write("<h1>Comparison operators</h1>");
+
+if ("Rose" !== "rose"){
+    alert("Rose is not equal rose");
+}
+
+
+// if...else and else if statements
+document.write("<h1>if...else and else if statements</h1>");
+
+var correctAnswer = "Vatican";
+if (x === correctAnswer) {
+    alert("Correct!");
+}
+else if (x === "Rome") {
+    alert("Incorrect but close");
+}
+else {
+    alert("Incorrect");
+}
+
+
+// Testing sets of conditions
+document.write("<h1>Testing sets of conditions</h1>");
+
+if (SAT > avg || GPA > 2.5 || sport === "football") {
+    alert("Welcome to Bubba State!");
+ }
+ else {
+     alert("Have you looked into appliance repair?");
+ }
+
+// if statements nested
+document.write("<h1> if statements nested</h1>");
+
+if (c === d) {
+    if (x === y) {
+        g = h;
+ }
+ else if (a === b) {
+    g = h;
+ }
+ else {
+    e = f;
+ }
+}
+else {
+    e = f;
+}
+    
+
+// Arrays
+document.write("<h1>Arrays</h1>");
 
 var stdName  = new Array();
 
-// Exercise # 3
-
 var studentName = ["Nasir", "Ali", "Raza", "Abbas"];
-
-
-// Exercise # 4
 
 var evenNumber = [2, 4, 6, 8, 10, 12, 14];
 
-// Exercise # 5
-
 var boolArray = [true, false, true, false];
-
-// Exercise # 6
 
 var mixArray = [1, "Mixed", 2, "Array", 3, true, 4, false];
 
 
-
-// Exercise # 7
-
-var mobNetworksPakistan = ["Ufone", "Telenor", "Jazz", "Zong"];
-
-// Exercise # 8
-
-var qualInPakistan = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];
-
-document.write("<h1>Qualifications:</h1>");
-
-for (var i = 0; i < qualInPakistan.length; i++ ){
-    document.write(i + 1 + ") " + qualInPakistan[i] + "<br />");
-}
-
-
-
-// Exercise # 9
+// Arrays: Adding and removing elements
+document.write("<h1>Arrays: Adding and removing elements</h1>");
 
 var topMovies2015 = [];
 
@@ -191,46 +227,14 @@ topMovies2015.push("Avengers: Age Of Ultron");
 topMovies2015.push("Spectre");
 topMovies2015.push("Jurrasic World");
 topMovies2015.push("Inside Out");
+topMovies2015.pop();
 
-document.write("<h1>Top movies of 2015:</h1>");
-
-for (var i = 0; i < topMovies2015.length; i++ ){
-    document.write(i + 1 + ") " + topMovies2015[i] + "<br />");
-}
-
-document.write("<br /><h2>Length of the array: " + topMovies2015.length + "</h2>");
-
-// Exercise # 10
-
-var favCars = ["Audi", "Volvo", "Ford", "Lamborghini"];
-
-document.write("<h1>Favorite Cars:</h1>");
-
-for (var i = 0; i < favCars.length; i++ ){
-    if ( i == 0 || i == favCars.length-1){
-        let counter = i == 0 ? "First" : "Last";
-        document.write(counter + " index of the array: " + i + "<br />");
-        document.write("Car at " + counter.toLowerCase() + " index of the array: " + favCars[i] + "<br />");
-    }
-}
-
-// Exercise # 11
-
-stdName = ["Michael", "Jhon", "Tony"];
-obtMarks = [320, 230, 480]
-
-document.write("<h1>Student Marks:</h1>");
-
-for (var i = 0; i < stdName.length; i++ ){
-        document.write("Score of " + stdName[i] + " is " + obtMarks[i] + ". Percentage: " + Math.round(((obtMarks[i] / 500)*100)) + "%<br />");
-}
-
-// Exercise # 12
+// Arrays: Removing, inserting and extracting elements
+document.write("<h1>Arrays: Removing, inserting and extracting elements</h1>");
 
 var colours = ["Red", "Green", "Blue", "Yellow", "Black"];
 
-
-document.write("<h1>Colors:</h1>");
+document.write("<h2>Colors:</h2>");
 document.write(colours + "<br />");
 
 var begColor = prompt("Please enter the color you wants to add at the beginning of array");
@@ -262,23 +266,15 @@ var delNumOfColors = parseInt(prompt("Please enter the number that how many colo
 colours.splice(arrayIndex, delNumOfColors);
 document.write(colours + "<br />");
 
-
-
-// Exercise # 13
-
 var stdScores = [320, 230, 480, 120];
 
 document.write("<br />Scores of Students: " + stdScores);
 document.write("<br />Ordered Scores of Students: " + stdScores.sort());
 
-// Exercise # 14
-
 var fruits = ["strawberry", "apple", "orange", "banana"];
 
 document.write("<br /><br />Fruits list:<br />" + fruits);
 document.write("<br />Ordered fruits list:<br />" + fruits.sort());
-
-// Exercise # 15
 
 var cities = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
 var selectedCities = cities.slice(2,5);
@@ -286,60 +282,61 @@ var selectedCities = cities.slice(2,5);
 document.write("<br /><br />Cities list:<br />" + cities);
 document.write("<br /><br />Selected cities list:<br />" + selectedCities);
 
-// Exercise # 16
 
-var animals = ["This ", " is ", " my ", " cat"];
 
-document.write("<br /><br />Array:<br />" + animals);
-document.write("<br /><br />String:<br />" + animals.join(""));
+// for loops
+document.write("<h1>for loops</h1>");
 
-// Exercise # 17
+var qualInPakistan = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];
 
-var computerDevices = [];
+document.write("<h2>Qualifications:</h2>");
 
-computerDevices.push("keyboard");
-computerDevices.push("mouse");
-computerDevices.push("printer");
-computerDevices.push("monitor");
-
-document.write("<h2>Devices:<br />" + computerDevices + "</h2>");
-
-for (var i = 0; i < computerDevices.length; i++){
-    document.write("<br/>Out:<br />" + computerDevices[i]);
+for (var i = 0; i < qualInPakistan.length; i++ ){
+    document.write(i + 1 + ") " + qualInPakistan[i] + "<br />");
 }
 
-// Exercise # 18
+var mobNetworksPakistan = ["Ufone", "Telenor", "Jazz", "Zong"];
 
-document.write("<h2>Devices:<br />" + computerDevices + "</h2>");
+document.write("<br /><h2>Mobile Networks in Pakistan:</h2>");
 
-for (var i = computerDevices.length - 1; i >= 0; i--){
-    document.write("<br/>Out:<br />" + computerDevices[i]);
+for (var i = 0; i < mobNetworksPakistan.length; i++ ){
+    document.write(i + 1 + ") " + mobNetworksPakistan[i] + "<br />");
 }
 
+var favCars = ["Audi", "Volvo", "Ford", "Lamborghini"];
 
+document.write("<br /><h2>Favorite Cars:</h2>");
 
-// Exercise # 19
-
-phoneManufacturers = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"]
-
-var str;
-
-for (var i = 0; i < phoneManufacturers.length; i++){
-    if (i == 0){
-        str = "<select id='phman' name='phman'>" + "<option value='" + phoneManufacturers[i].toLowerCase() + "'>" + phoneManufacturers[i] + "</option>"
-    }
-    else{
-        str = str + "<option value='" + phoneManufacturers[i].toLowerCase() + "'>" + phoneManufacturers[i] + "</option>"
+for (var i = 0; i < favCars.length; i++ ){
+    if ( i == 0 || i == favCars.length-1){
+        let counter = i == 0 ? "First" : "Last";
+        document.write(counter + " index of the array: " + i + "<br />");
+        document.write("Car at " + counter.toLowerCase() + " index of the array: " + favCars[i] + "<br />");
     }
 }
-str = str + "</select>"
 
-console.log(str);
+// for loops: Flags, Booleans, array length and loopus interruptus
+document.write("<h1>for loops: Flags, Booleans, array length and loopus interruptus</h1>");
 
-document.write("<br /><br />" + str);
- 
 
-// Chapter # 20
+var numElements = cleanestCities.length;
+var matchFound = false;
+
+for (var i = 0; i < numElements; i++){
+    if (cityToCheck === cleanestCities[i]) {
+        matchFound = true;
+        alert("It's one of the cleanest cities");
+        break;
+    }
+}
+
+if (matchFound === false) {
+    alert("It's not on the list");
+}
+
+
+// for loops nested
+document.write("<h1>for loops nested</h1>");
 
 var firstNames = ["BlueRay ", "Upchuck ", "Lojack ", "Gizmo ", "Do-Rag "];
 var lastNames = ["Zzz", "Burp", "Dogbone", "Droop"];
@@ -350,10 +347,9 @@ for (var i = 0; i < firstNames.length; i++) {
         fullNames.push(firstNames[i] + lastNames[j]);
     }
 }
+
 for (i = 0; i < fullNames.length; i++)
 document.write(fullNames[i]+"<br/>");
-
-//Exercise # 3
 
 for (var i = 0; i < 3; i++) {
     console.log("Outer loop iteration: " + i);
@@ -364,4 +360,325 @@ for (var i = 0; i < 3; i++) {
     }
   }
 
+// Changing case
+document.write("<h1>Changing case</h1>");
 
+var cityToCheck = prompt("Enter your city");
+
+cityToCheck = cityToCheck.toLowerCase();
+
+var cleanestCities = ["cheyenne", "santa fe", "tucson", "great falls", "honolulu"];
+
+for (var i = 0; i <= 4; i++) {
+    if (cityToCheck === cleanestCities[i]) {
+        alert("It's one of the cleanest cities");
+    }
+}
+
+// Strings: Measuring length and extracting parts
+document.write("<h1>Strings: Measuring length and extracting parts</h1>");
+
+ var str = prompt("Enter some text");
+ var numChars = str.length;
+    for (var i = 0; i < numChars; i++) {
+        if (str.slice(i, i + 2) === " ") {
+            alert("No double spaces!");
+            break;
+        }
+}
+
+// Strings: Finding segments
+document.write("<h1>Strings: Finding segments</h1>");
+
+var text = "It is startling to think that, even in the darkest depths of World War II, J. R. R. Tolkien was writing the trilogy."
+
+var firstChar = text.indexOf("World War II");
+
+if (firstChar !== -1) {
+    text = text.slice(0, firstChar) + "the Second World War" + text.slice(firstChar + 12);
+}
+
+// Strings: Finding a character at a location
+document.write("<h1>Strings: Finding a character at a location</h1>");
+
+var text = "Congratulations! you have won";
+
+for (var i = 0; i < text.length; i++) {
+    if (text.charAt(i) === "!") {
+        alert("Exclamation point found!");
+        break;
+    }
+}
+
+// Strings: Replacing characters
+document.write("<h1>Strings: Replacing characters</h1>");
+
+var text = "It is startling to think that, even in the darkest depths of World War II, J. R. R. Tolkien was writing the trilogy."
+
+for (var i = 0; i < text.length; i++) {
+    if (text.slice(i, i + 12) === "World War II") {
+        text = text.slice(0, 1) + "the Second World War" + text.slice(i + 12);
+    }
+}
+
+text = "It is startling to think that, even in the darkest depths of World War II, J. R. R. Tolkien was writing the trilogy."    
+
+var newText = text.replace("World War II", "the Second World War");
+
+text = "It is startling to think that, even in the darkest depths of World War II, J. R. R. Tolkien was writing the trilogy. It is startling to think that, even in the darkest depths of World War II, J. R. R. Tolkien was writing the trilogy. It is startling to think that, even in the darkest depths of World War II, J. R. R. Tolkien was writing the trilogy."
+
+var newText = text.replace(/World War II/g, "the Second World War");
+
+// Rounding numbers
+document.write("<h1>Rounding numbers</h1>");
+
+var scoreAvg = Math.round(.0678437);
+document.write("<h2>Math.round(.0678437): " + scoreAvg + "</h2>");
+var scoreAvg = Math.ceil(.000001);
+document.write("<h2>Math.ceil(.000001): " + scoreAvg + "</h2>");
+var scoreAvg = Math.floor(.999999);
+document.write("<h2>Math.floor(.999999): " + scoreAvg + "</h2>");
+
+// Generating random numbers
+document.write("<h1>Generating random numbers</h1>");
+
+var bigDecimal = Math.random();
+var improvedNum = (bigDecimal * 6) + 1;
+var numberOfStars = Math.floor(improvedNum);
+
+document.write("<h2>Random number of Stars: " + numberOfStars + "</h2>");
+
+// Converting strings to integers and decimals
+document.write("<h1>Converting strings to integers and decimals</h1>");
+
+
+var myInteger = parseInt("1.9999");
+var myFractional = parseFloat("1.9999");
+
+document.write("<h2>String to integer parseInt('1.9999'): " + myInteger + "</h2>");
+document.write("<h2>String to decimal parseFloat('1.9999'): " + myFractional + "</h2>");
+
+
+// Converting strings to numbers, numbers to strings
+document.write("<h1>Converting strings to numbers, numbers to strings</h1>");
+
+var integerString = "24"
+var num = Number(integerString);
+
+var floatingNumString = "24.9876";
+var num = Number(floatingNumString);
+
+var numberAsNumber = 1234;
+var numberAsString = numberAsNumber.toString();
+
+// Controlling the length of decimals
+document.write("<h1>Controlling the length of decimals</h1>");
+
+var str = num.toString();
+if (str.charAt(str.length - 1) === "5") {
+    str = str.slice(0, str.length - 1) + "6";
+}
+
+num = Number(str);
+prettyNum = num.toFixed(2);
+
+
+// Getting the current date and time
+document.write("<h1>Getting the current date and time</h1>");
+
+var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+var now = new Date();
+var theDay = now.getDay();
+var nameOfToday = dayNames[theDay];
+
+document.write("<h2>"  + nameOfToday + "</h2>");
+
+// Extracting parts of the date and time
+document.write("<h1>Extracting parts of the date and time</h1>");
+
+var d = new Date();
+var currentMonth = d.getMonth();
+
+var year =  d.getFullYear();
+
+
+// Specifying a date and time
+document.write("<h1>Specifying a date and time</h1>");
+
+var today = new Date();
+
+var doomsday = new Date("June 30, 2035");
+
+var msToday = today.getTime();
+var msDoomsday = doomsday.getTime();
+
+var msDiff = msDoomsday - msToday;
+
+var dDiff = msDiff / (1000 * 60 * 60 * 24);
+
+// Changing elements of a date and time
+document.write("<h1>Changing elements of a date and time</h1>");
+
+var d = new Date();
+
+d.setHours(13);
+d.setMinutes(05);
+d.setSeconds(55);
+
+
+// Functions
+document.write("<h1>Functions</h1>");
+
+function tellTime() {
+    var now = new Date();
+    var theHr = now.getHours();
+    var theMin = now.getMinutes();
+    alert("Current time: "+ theHr + ":" + theMin);
+}
+
+tellTime();
+
+// Functions: Passing them data
+document.write("<h1>Functions: Passing them data</h1>");
+
+greetUser("Hello, there.");
+
+function greetUser(greeting) {
+    alert(greeting);
+}
+
+
+// Functions: Passing data back from them
+document.write("<h1>Functions: Passing data back from them</h1>");
+
+
+var result = addNumber();
+
+function addNumber(){
+    return 5 + 7;
+}
+
+
+// switch statements: How to start them
+document.write("<h1>switch statements: How to start them</h1>");
+
+switch(dayOfWk) {
+    case "Sat" :
+        alert("Whoopee");
+        break;
+    case "Sun" :
+        alert("Whoopee");
+        break;
+    case "Fri" :
+        alert("TGIF!");
+        break;
+    default :
+        alert("Shoot me now!");
+}
+
+// switch statements: How to complete them
+document.write("<h1>switch statements: How to complete them</h1>");
+
+switch(dayOfWk) {
+    case "Sat" :
+        alert("Whoopee");
+        break;
+    case "Sun" :
+        alert("Whoopee");
+        break;
+    case "Fri" :
+        alert("TGIF!");
+        break;
+    default :
+        alert("Shoot me now!");
+}
+
+
+// while loops
+document.write("<h1>while loops</h1>");
+
+var i = 0;
+
+while (i <= 3) {
+    alert(i);
+    i++;
+}
+
+// do...while loops
+document.write("<h1>do...while loops</h1>");
+
+var i = 0;
+do {
+    alert(i);
+    i++;
+} while (i <= 3);
+
+// Events: button
+document.write("<h1>Events: button</h1>");
+
+<input type="button" value="Click" onClick="alert('Hello world!');"></input>
+
+
+// Events: mouse
+document.write("<h1>Events: mouse</h1>");
+
+<h1 onMouseover="alert('Be sure to get your shopping done today.');">World Ends Tomorrow</h1>
+
+// Events: fields
+document.write("<h1>Events: fields</h1>");
+
+"Email:<br/><input type="text" size="30" onFocus="this.style.backgroundColor='yellow';"">
+
+// Reading field values
+document.write("<h1>Reading field values</h1>");
+
+function checkAddress(fieldId) {
+var val = document.getElementById(fieldId).value;
+    if (val === "") {
+        alert("Email address required.");
+    }
+}
+
+// Setting field values
+document.write("<h1>Setting field values</h1>");
+
+function fillCity() {
+    var cityName;
+    var zipEntered = document.getElementById("zip").value;
+    switch (zipEntered) {
+        case "60608" :
+            cityName = "Chicago";
+            break;
+        case "68114" :
+            cityName = "Omaha";
+            break;
+        case "53212" :
+            cityName = "Milwaukee";
+    }
+    document.getElementById("city").value = cityName;
+}
+
+
+// Swapping images and setting classes
+document.write("<h1>Swapping images and setting classes</h1>");
+
+
+function enlargeForm() {
+    var frm = document.getElementById("link1");
+    frm.className = "jumbo";
+}
+    
+
+// Setting styles
+document.write("<h1>Setting styles</h1>");
+
+
+document.getElementById("mainPic").style.margin = "0 10px 0 10px;";
+
+// Target all elements by tag name
+document.write("<h1>Target all elements by tag name</h1>");
+
+
+var pics = document.getElementsByTagName("img");
+var divs = document.getElementsByTagName("div");
+var ulists = document.getElementsByTagName("ul");
